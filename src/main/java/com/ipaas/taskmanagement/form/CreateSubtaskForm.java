@@ -1,0 +1,19 @@
+package com.ipaas.taskmanagement.form;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
+
+/**
+ * Form for creating a new subtask.
+ */
+@Data
+public class CreateSubtaskForm {
+
+    @NotBlank(message = "Title is required")
+    @Size(min = 3, max = 200, message = "Title must be between 3 and 200 characters")
+    private String title;
+
+    @Size(max = 1000, message = "Description must not exceed 1000 characters")
+    private String description;
+}

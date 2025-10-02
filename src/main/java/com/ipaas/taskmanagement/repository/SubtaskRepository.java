@@ -30,11 +30,6 @@ public interface SubtaskRepository extends JpaRepository<Subtask, UUID>, JpaSpec
     Page<Subtask> findByTaskId(UUID taskId, Pageable pageable);
 
     /**
-     * Finds subtasks by task ID and status.
-     */
-    List<Subtask> findByTaskIdAndStatus(UUID taskId, TaskStatus status);
-
-    /**
      * Counts subtasks by task ID.
      */
     long countByTaskId(UUID taskId);
@@ -51,8 +46,4 @@ public interface SubtaskRepository extends JpaRepository<Subtask, UUID>, JpaSpec
            "FROM Subtask s WHERE s.task.id = :taskId AND s.status != 'COMPLETED'")
     boolean areAllSubtasksCompleted(@Param("taskId") UUID taskId);
 
-    /**
-     * Deletes all subtasks by task ID.
-     */
-    void deleteByTaskId(UUID taskId);
 }

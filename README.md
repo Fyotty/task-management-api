@@ -54,7 +54,7 @@ This is the easiest way to get the application and all its services running.
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Fyotty/task-management-api.git
     cd task-management-api
     ```
 
@@ -71,8 +71,8 @@ This is the easiest way to get the application and all its services running.
 
 3.  **Access the API:**
 
-    -   **API Base URL:** `http://localhost/api`
-    -   **Swagger UI:** `http://localhost/swagger-ui.html`
+    -   **API Base URL:** `http://localhost:8080/api`
+    -   **Swagger UI:** `http://localhost:8080/swagger-ui.html`
 
 ### Running Locally
 

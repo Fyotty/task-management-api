@@ -70,14 +70,6 @@ public class UserService {
     }
 
     /**
-     * Checks if a user exists by ID.
-     */
-    @Transactional(readOnly = true)
-    public boolean existsById(UUID id) {
-        return userRepository.existsById(id);
-    }
-
-    /**
      * Gets user entity by ID (for internal use).
      */
     @Transactional(readOnly = true)
